@@ -1,20 +1,16 @@
 fun main() {
-    // Создаем список для хранения строк
-    val mealStrings = mutableListOf<String>()
+    val lines = mutableListOf<String>()
 
-    // Считываем 5 строк с ввода
-    println("Введите 5 строк:")
-    repeat(5) {
-        // Читаем строку и добавляем в список
-        val input = readLine()
-        if (input != null) {
-            mealStrings.add(input)
+    for (i in 1..5) {
+        println("Введите строку $i:")
+        val line = readLine()
+        if (line != null) {
+            lines.add(line)
         }
     }
 
-    // Выводим обеденные строки
-    println("Обеденные строки:")
-    mealStrings.forEach { meal ->
-        println(meal)
-    }
+    val result = lines.joinToString(" ")
+    println("Результат: $result")
 }
+
+
